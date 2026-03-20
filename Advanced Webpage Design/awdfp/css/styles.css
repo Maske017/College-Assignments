@@ -1,0 +1,262 @@
+/* CSS Reset */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+/*Background Image: Applies the night sky picture to the webpage background*/
+body{
+	background-image: url(../images/2.png);
+	background-repeat: no-repeat;
+}
+
+/*Header: sets out the design of the page header*/
+.header{
+	min-height: 200em;
+	width: 100%;
+	background-position: center;
+	position: relative;
+}
+
+/*Menu*/
+.menu{
+	width: 100px;
+	display: inline-block;
+	text-align: right;
+	color: #fff;
+	font-size: 34px;
+}
+
+/*Spacing of Nav Box*/
+.nav{
+	position: relative;
+	float: right;
+	display: block;
+	padding: 4% 6%;
+	justify-content: space-between;
+	text-align: right;
+	margin-bottom: 20px;
+	height: 50%;
+}
+
+
+/*Logo Image: Top left image*/
+div img{
+	width: 600px;
+}
+
+/* Text Body for the page*/
+.text-box{
+	display: inline-block;
+	width: 95%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+}
+
+/*Header Text Box*/
+.text-box h1{
+	font-size: 64px;
+}
+
+/*Body Paragraph Text Box*/
+.text-box p{
+	font-size: 32px;
+}
+
+.text-box img{
+	width: 10px;
+}
+
+/* Navbar */
+.nav-list a:visited{
+    color: rgb(255, 145, 0);
+    font-weight: bold;
+}
+
+/* Adjusts the hover style of nav links on desktop viewports */
+.nav-list a:hover{
+    color: red;
+    font-weight: bolder;
+    transition: -5s;
+    font-size: 1.2em;
+}
+
+/* Positions the nav bar on desktop viewports */
+#nav{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Adjust the text in the navbar list */
+li{
+	position: flex;
+	font-size: 30px;
+	display: inline;
+	color: #fff;
+}
+
+/* Social Links */
+.social-link a:hover{
+	color:rgb(255, 255, 255);
+	font-weight: bolder;
+	transition: -5s;
+	font-size: 1.2em;
+}
+
+/* Adjusts the style of social links after visisted on link page */
+.social-link a:visited{
+	font-weight: bold;
+	color:rgb(255, 145, 0)
+}
+
+/*Adjusts the design of the schedule*/
+table{
+	border: 1px solid #fff;
+	right: 120px;
+	width: 800px;
+	border-spacing: 40px;
+	font-size: 28px;
+	
+}
+
+
+table td{
+	border: 1px solid #fff;
+	padding: 4px 8px;
+}
+
+table th{
+	border: 1px solid #fff;
+	padding: 4px 8px;
+}
+
+table{
+	border-collapse: collapse;
+	align-items: center;
+}
+
+.center{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
+/* Media Query for Phones and Small Devices: Adjusts page layout on phone viewports*/
+@media all and (max-width: 480px) {
+	div img{
+		width: 200px;
+	}
+
+	.text-box h1{
+		font-size: 40px;
+		top: 15%;
+	}
+
+	.text-box p{
+		font-size: 18px;
+	}
+
+	.text-box img{
+		width: 150px;
+	}
+
+	li{
+		font-size: 18px;
+		display: flex;
+	}
+
+	.social-link{
+		font-size: 22px;
+		margin-left: 20%;	
+	}
+	
+
+	table{
+		border: 1px solid #fff;
+		right: 60px;
+		width: 350px;
+		border-spacing: 40px;
+		font-size: 12px;
+		
+	}
+}	
+
+/* Media Query for Tablets: Adjusts the design layout on tablet viewports */ 
+@media all and (min-width: 481px) and (max-width: 767px) {
+	div img{
+		width: 350px;
+	}
+
+	.text-box h1{
+		font-size: 24px;
+	}
+
+	body{
+		display: inline-block;
+		margin: 8px;
+	}
+
+	li{
+		font-size: 12px;
+		display: flex;
+	}
+
+	table{
+		border: 1px solid #fff;
+		right: 60px;
+		width: 200px;
+		border-spacing: 40px;
+		font-size: 12px;
+		
+	}
+}
+
+
+
+
+/* Media Query for Tablets in Portrait Mode: Adjusts design layout on tablet viewports in Portrait Mode */
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	div img{
+		width: 350px;
+	}
+
+	.text-box h1{
+		font-size: 48px;
+	}
+
+	.text-box p{
+		font-size: 38px;
+	}
+
+	body{
+		display: inline-block;
+		margin: 8px;
+	}
+
+	li{
+		font-size: 22px;
+		display: flex;
+	}
+
+	.social-link{
+		font-size: 50px;
+		margin-left: 25%;	
+	}
+
+	table{
+		border: 1px solid #fff;
+		right: 60px;
+		width: 740px;
+		border-spacing: 40px;
+		font-size: 24px;
+		
+	}
+}
