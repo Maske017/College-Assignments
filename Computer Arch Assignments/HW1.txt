@@ -1,0 +1,43 @@
+//Inserting variables for multiplication, storing them in memory and outputting to monitor
+INPUT
+STORE A
+OUTPUT
+INPUT
+STORE B
+OUTPUT
+INPUT
+STORE C
+OUTPUT
+
+//multiplication loop 1
+loop1, LOAD R1 //loading first result variable
+	ADD A //add R1 and A together
+        STORE R1 //store as a new R1 value
+        LOAD B //load deincriment value
+        SUBT one //subtract by 1
+        STORE B //store new deincriment value
+        SKIPCOND 400 //skipcond to exit loop
+        JUMP loop1 //loops back to the start of loop1
+
+//multiplication loop 2
+loop2, Load R2 //load second result variable
+	ADD R1 //Add R1 and R2 together
+        STORE R2 //store as new R2 value
+        LOAD C //load second deincriment value
+        SUBT one //subtract 1
+        STORE C //store new deincriment value
+        SKIPCOND 400 //skipcond to exit loop
+        JUMP loop2 //loops back to the start of loop2
+        
+LOAD R2 //loads final result
+OUTPUT //outputs R2 to monitor
+HALT //halts program
+
+
+//variables in memory storage 
+R1, DEC 0
+R2, DEC 0
+A, DEC 0
+B, DEC 0
+C, DEC 0
+one, DEC 1

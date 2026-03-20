@@ -1,0 +1,107 @@
+﻿/MARIN ASKE
+/COMPUTER ARCHITECTURE
+/HW3 
+
+/Start program at Memory location 100
+org 100
+
+/Take inputs and store them
+INPUT
+STORE A
+OUTPUT
+SKIPCOND 800
+JUMP INVALID
+INPUT
+STORE B
+OUTPUT
+SKIPCOND 800
+JUMP INVALID
+INPUT
+STORE C
+OUTPUT
+SKIPCOND 800
+JUMP INVALID
+INPUT
+STORE D
+OUTPUT
+SKIPCOND 800
+JUMP INVALID
+INPUT
+STORE E
+OUTPUT
+SKIPCOND 800 
+JUMP INVALID
+       
+/(A*B) = R1
+LOAD A
+STORE T1
+LOAD B
+STORE T2
+JnS MULT
+STORE R1
+
+/(C*D) = R2
+LOAD C
+STORE T1
+LOAD D
+STORE T2
+JnS MULT
+STORE R2
+
+/R1 * R2 = R3
+LOAD R1
+STORE T1
+LOAD R2
+STORE T2
+JnS MULT
+STORE R3
+
+/R3 * E = Z
+LOAD R3
+STORE T1
+LOAD E
+STORE T2
+JnS MULT
+STORE Z
+
+/Load Final Product, output and halt program
+OUTPUT
+HALT
+
+/Initializing MULT Subroutine
+MULT, HEX 0
+CLEAR
+STORE X
+
+/Multiplication Loop
+LOOP, 		LOAD X
+			ADD T1
+			STORE X
+        	LOAD T2
+        	SUBT ONE
+        	STORE T2
+        	SKIPCOND 400
+        	JUMP LOOP
+        	LOAD X
+        	JUMPI MULT
+                  
+/Initializing Variables used in Dec
+A, DEC 0
+B, DEC 0
+C, DEC 0
+D, DEC 0
+E, DEC 0
+Z, DEC 0
+ONE, DEC 1
+R1, DEC 0
+R2, DEC 0
+R3, DEC 0
+T1, DEC 0
+T2, DEC 0
+X, DEC 0
+Y, DEC 0
+
+/If input is invalid, clears AC, outputs AC and Halts the program			
+INVALID, 	LOAD Y
+			OUTPUT
+

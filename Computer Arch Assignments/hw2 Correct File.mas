@@ -1,0 +1,67 @@
+﻿/Marin Aske
+/HW2 
+/Computer Architecture Montagne
+
+/Initializing A and B variables 
+org 100
+INPUT
+SKIPCOND 800
+JUMP ERROR
+STORE 001
+OUTPUT
+
+INPUT 
+SKIPCOND 800
+JUMP ERROR
+STORE 002
+OUTPUT
+
+/A*B Multiplication Loop
+loop, LOAD R1
+	ADD 001
+	STORE R1
+	LOAD 002
+	SUBT one
+	STORE 002
+	SKIPCOND 400
+	JUMP loop
+
+/Initializing c and d variables
+INPUT
+SKIPCOND 800
+JUMP ERROR
+STORE 003 
+OUTPUT
+
+INPUT 
+SKIPCOND 800
+JUMP ERROR
+STORE 004 
+OUTPUT
+
+/C*D Multiplication Loop
+loop2, LOAD R2
+	ADD 003
+	STORE R2
+	LOAD 004
+	SUBT one
+	STORE 004
+	SKIPCOND 400
+	JUMP loop2
+
+ERROR, CLEAR
+	OUTPUT
+    JUMP HALT
+    
+/SumAB + SumCD addition
+HALT,LOAD R1
+	ADD R2
+    OUTPUT
+    HALT
+
+/Initializing Variables
+R1, DEC 0
+R2, DEC 0
+one, DEC 1
+
+	
