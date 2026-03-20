@@ -1,0 +1,6 @@
+Super_Awesome_Costume 21 9.99 10
+Super_Awesome_Costume 2 39.99 3
+Ghost 1 29.99 4
+Mando 0 129.99 8
+Pizza 0 39.99 1
+Witch 0 59.99 3
